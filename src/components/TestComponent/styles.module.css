@@ -1,0 +1,149 @@
+.table {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header,
+.item {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.header {
+  padding: 0 12px;
+  margin-bottom: 10px;
+}
+
+.item {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  margin: 5px 0;
+  height: 70px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.item:hover {
+  box-shadow: 0px 0px 20px 0px #00000026;
+  cursor: pointer;
+}
+
+.market {
+  border-left: 4px solid #e14165;
+}
+
+.games {
+  border-left: 4px solid #8686ff;
+}
+
+.delivery {
+  border-left: 4px solid #c2c2ff;
+}
+
+.header {
+  font-weight: bold;
+  color: #999999;
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+}
+
+.header__title {
+  font-weight: 400;
+  color: #999999;
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.name {
+  max-width: 390px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  vertical-align: middle;
+  height: 40px;
+  padding: 15px;
+}
+
+.resultsBtn,
+.finalizeBtn {
+  width: 95px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.resultsBtn {
+  background: #2ee5ac;
+  border: 1px solid #2ee5ac;
+}
+
+.finalizeBtn {
+  background: #7d7d7d;
+  border: 1px solid #7d7d7d;
+}
+
+.status {
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.online {
+  color: #2dd36f;
+}
+
+.paused {
+  color: #ffa500;
+}
+
+.stopped {
+  color: #ff3b30;
+}
+
+.draft {
+  color: #888;
+}
+
+.no__results {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.no__results h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 37px;
+  color: #222222;
+  height: 70px;
+  max-width: 810px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

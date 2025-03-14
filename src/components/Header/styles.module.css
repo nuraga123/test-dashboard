@@ -1,0 +1,15 @@
+.header {
+  margin: 41px auto 40px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  vertical-align: middle;
+  color: #222222;
+  max-width: 330px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}

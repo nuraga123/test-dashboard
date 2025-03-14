@@ -1,0 +1,59 @@
+.search {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.search__input {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e1e4e8;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.search__input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  vertical-align: middle;
+  color: #d1d1d1;
+}
+
+.search__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #999;
+  margin: 15px 11px 16px 13px;
+}
+
+.search__clear {
+  position: absolute;
+  right: 5rem;
+  top: 47%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+}
+
+.search__clear:hover {
+  color: #fe4848;
+}
+
+.search__count {
+  font-family: "Roboto", monospace;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d1d1d1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: right;
+  vertical-align: middle;
+}

@@ -1,0 +1,11 @@
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+}
