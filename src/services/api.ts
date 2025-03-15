@@ -8,9 +8,33 @@ const API_BASE_URL = 'http://localhost:3000';
 const JSON__TESTS = db.tests;
 const JSON__SITES = db.sites;
 
+export const fetchTests = async () => {
+  const tests = JSON__TESTS;
+  console.log(tests.length)
+  const sites = JSON__SITES;
+
+  // Объединяем данные
+  return tests
+    .map(test => {
+      const site = sites.find(site => +site.id === test.siteId)?.url;
+      return {
+        id: +test.id,
+        name: test.name,
+        type: test.type,
+        status: test.status,
+        site: site || ''
+      };
+    });
+}
+
+
+export const fetchTestById = async (id: number) => {
+  const fakeDB = db.tests.find(test => +test.id === +id) || {}
+  return fakeDB;
+}
 
 // Функция для получения всех тестов с информацией о сайтах
-export const fetchTests = async (): Promise<Test[] | []> => {
+export const getTests = async (): Promise<Test[] | []> => {
   try {
     // Получаем тесты и сайты
     const [testsResponse, sitesResponse] = await Promise.all([
@@ -21,21 +45,21 @@ export const fetchTests = async (): Promise<Test[] | []> => {
     console.log(testsResponse, sitesResponse)
 
 
-    const tests = JSON__TESTS;
-    console.log(tests.length)
-    const sites = JSON__SITES;
+    const tests = testsResponse.data;
+    const sites = sitesResponse.data;
 
     // Объединяем данные
-    return tests.map(test => {
-      const site = sites.find(site => +site.id === test.siteId)?.url;
-      return {
-        id: +test.id,
-        name: test.name,
-        type: test.type,
-        status: test.status,
-        site: site || ''
-      };
-    });
+    return tests
+      .map(test => {
+        const site = sites.find(site => +site.id === test.siteId)?.url;
+        return {
+          id: +test.id,
+          name: test.name,
+          type: test.type,
+          status: test.status,
+          site: site || ''
+        };
+      });
   } catch (error) {
     console.error('Ошибка при получении тестов:', error);
     return [];
@@ -43,7 +67,7 @@ export const fetchTests = async (): Promise<Test[] | []> => {
 };
 
 // Функция для получения теста по ID
-export const fetchTestById = async (id: number): Promise<Test | object> => {
+export const getTestById = async (id: number): Promise<Test | object> => {
   try {
     // Получаем тест и сайты
     const { data } = await axios.get(`${API_BASE_URL}/tests/${+id}`);
