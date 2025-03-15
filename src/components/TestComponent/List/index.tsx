@@ -76,6 +76,7 @@ const TestList = ({ tests }: { tests: Test[] }) => {
 
           {filteredTests.map((test) => (
             <TestItem
+              key={test.id}
               {...test}
               action={test.status === "Draft" ? "Finalize" : "Results"}
             />

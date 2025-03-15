@@ -47,6 +47,7 @@ const Item = ({ id, name, type, status, site, action }: ItemProps) => {
 
   return (
     <div
+      key={id}
       className={`${styles.item} ${getBorderLeftClass()}`}
       onClick={() =>
         handleActionClick(id, action === "Results" ? "results" : "finalize")

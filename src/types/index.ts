@@ -1,6 +1,6 @@
 // Типы статусов и типов тестов
-export type TestStatus = 'Online' | 'Paused' | 'Stopped' | 'Draft';
-export type TestType = 'Classic' | 'MVT' | 'Server-side';
+export type TestStatus = 'Online' | 'Paused' | 'Stopped' | 'Draft' | string;
+export type TestType = 'Classic' | 'MVT' | 'Server-side' | string;
 
 // Интерфейс для сайта
 export interface Site {
